@@ -34,7 +34,7 @@ turtle1_teleport1 = [[1, 1,0],
 
 s = turtle1_teleport1[::-1]                   
 #turtle1_teleport1 = []
-def do_the_spawn():
+def do_the_zigzag_forward():
   for i in turtle1_teleport1:
    if type(i)== list:
     if i== ([1,1,0]):         
@@ -46,7 +46,7 @@ def do_the_spawn():
     else:
       turtle1_teleport(i[0],i[1],i[2])
       time.sleep(0.5)
-def do_the_spawn1():
+def do_the_zigzag_backward():
   for i in s:
    if type(i)== list:
     if i== ([1,10,0]):         
@@ -63,8 +63,8 @@ def do_the_spawn1():
 if __name__ == '__main__':
     try:
         while (input !=0):
-         do_the_spawn()
-         do_the_spawn1()
+         do_the_zigzag_forward()
+         do_the_zigzag_backward()
     except rospy.ROSInterruptException:
         pass  
        
